@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://n7urnij5yfe4"
+path="res://.godot/imported/contrastGiantSlime.aseprite-180b5c57ac04b8cc69cbe8403880a41b.res"
+
+[deps]
+
+source_file="res://Sprites/HighContrast/contrastGiantSlime.aseprite"
+dest_files=["res://.godot/imported/contrastGiantSlime.aseprite-180b5c57ac04b8cc69cbe8403880a41b.res"]
+
+[params]
+

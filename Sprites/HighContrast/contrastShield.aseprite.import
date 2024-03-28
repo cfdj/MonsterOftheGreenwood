@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://hlqkfpsb1x4p"
+path="res://.godot/imported/contrastShield.aseprite-9fab1b72b5058850a043fd8b34de9549.res"
+
+[deps]
+
+source_file="res://Sprites/HighContrast/contrastShield.aseprite"
+dest_files=["res://.godot/imported/contrastShield.aseprite-9fab1b72b5058850a043fd8b34de9549.res"]
+
+[params]
+

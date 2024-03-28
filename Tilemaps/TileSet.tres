@@ -1,0 +1,36 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cauos48nymviy"]
+
+[ext_resource type="Texture2D" uid="uid://bdr5fg4u801s6" path="res://Sprites/Tiles.png" id="1_2f5v4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6xwds"]
+texture = ExtResource("1_2f5v4")
+separation = Vector2i(0, 1)
+texture_region_size = Vector2i(34, 16)
+0:0/0 = 0
+0:0/0/custom_data_1 = true
+1:0/0 = 0
+1:0/0/custom_data_1 = true
+2:0/0 = 0
+2:0/0/custom_data_1 = true
+0:1/0 = 0
+0:1/0/custom_data_1 = true
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/custom_data_1 = true
+0:2/0 = 0
+0:2/0/custom_data_0 = true
+1:2/0 = 0
+2:2/0 = 0
+2:2/0/custom_data_1 = true
+1:3/0 = 0
+0:3/0 = 0
+
+[resource]
+tile_shape = 1
+tile_layout = 5
+tile_size = Vector2i(32, 16)
+custom_data_layer_0/name = "MonsterNav"
+custom_data_layer_0/type = 1
+custom_data_layer_1/name = "PlayerNav"
+custom_data_layer_1/type = 1
+sources/0 = SubResource("TileSetAtlasSource_6xwds")

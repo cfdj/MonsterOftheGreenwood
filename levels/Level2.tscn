@@ -1,0 +1,325 @@
+[gd_scene load_steps=35 format=3 uid="uid://btfna4380o5ba"]
+
+[ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="1_yqbik"]
+[ext_resource type="TileSet" uid="uid://cauos48nymviy" path="res://Tilemaps/TileSet.tres" id="2_w3oc2"]
+[ext_resource type="Script" path="res://levels/MapSetup.gd" id="3_k3x0r"]
+[ext_resource type="Texture2D" uid="uid://b6n2ig6a8dc1c" path="res://Sprites/Animations/Stag.png" id="4_ckck4"]
+[ext_resource type="Script" path="res://Scripts/Monster.gd" id="5_6c61h"]
+[ext_resource type="SpriteFrames" uid="uid://ddi685t5a34ek" path="res://Sprites/Animations/Cursor.res" id="6_eudgo"]
+[ext_resource type="SpriteFrames" uid="uid://ckodbmehsr67x" path="res://Sprites/Animations/HighContrast/contrastStag.res" id="6_i84oi"]
+[ext_resource type="SpriteFrames" uid="uid://c3o28kxo3py76" path="res://Sprites/Animations/Axe.res" id="7_364av"]
+[ext_resource type="Script" path="res://levels/Character.gd" id="8_yditp"]
+[ext_resource type="SpriteFrames" uid="uid://d4bq8oeutr1h6" path="res://Sprites/Animations/HighContrast/contrastAxe.res" id="9_6f3a4"]
+[ext_resource type="SpriteFrames" uid="uid://c5jiyi452trvv" path="res://Sprites/Animations/Bow.res" id="9_qrc86"]
+[ext_resource type="SpriteFrames" uid="uid://cxk8uacoj6xti" path="res://Sprites/Animations/Shield.res" id="10_wfce3"]
+[ext_resource type="SpriteFrames" uid="uid://cfumksl1ganhi" path="res://Sprites/Animations/HighContrast/contrastBow.res" id="11_y58gp"]
+[ext_resource type="SpriteFrames" uid="uid://dghg0w6wbmxoc" path="res://Sprites/Animations/HighContrast/contrastShield.res" id="13_padgk"]
+[ext_resource type="Theme" uid="uid://0yn2t51td8om" path="res://UITheme.tres" id="15_qsptt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vid46"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwqmd"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms5q4"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5fm4"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kpi1"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(512, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycnyb"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(384, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyqiy"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(512, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ixwa"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6cpd"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fcutq"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vm330"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(128, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10bvr"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jb4a"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(384, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtrfk"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsgpd"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e86hg"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypsja"]
+atlas = ExtResource("4_ckck4")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e1a34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vid46")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwqmd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms5q4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5fm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kpi1")
+}],
+"loop": false,
+"name": &"MoveNorthEast",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycnyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyqiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ixwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6cpd")
+}],
+"loop": false,
+"name": &"MoveNorthWest",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fcutq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vm330")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10bvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jb4a")
+}],
+"loop": false,
+"name": &"MoveSouthEast",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtrfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsgpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e86hg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypsja")
+}],
+"loop": false,
+"name": &"MoveSouthWest",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncls3"]
+size = Vector2(20, 23)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("map", "monster", "turnButton", "undoButton", "Axe", "Bow", "Shield", "cursor")]
+script = ExtResource("1_yqbik")
+map = NodePath("TileMap")
+monster = NodePath("TileMap/Stag")
+hintTile = Vector2i(1, 2)
+finishTile = Vector2i(1, 3)
+turnButton = NodePath("CanvasLayer/VBoxContainer/Button")
+undoButton = NodePath("CanvasLayer/VBoxContainer/Undo")
+levelID = 2
+Axe = NodePath("TileMap/Axe")
+Bow = NodePath("TileMap/Bow")
+Shield = NodePath("TileMap/Shield")
+cursor = NodePath("TileMap/Cursor")
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+position = Vector2(224, 32)
+tile_set = ExtResource("2_w3oc2")
+format = 2
+layer_0/name = "Ground"
+layer_0/y_sort_enabled = true
+layer_0/navigation_enabled = false
+layer_0/tile_data = PackedInt32Array(65536, 0, 0, 131072, 0, 1, 196608, 0, 0, 262144, 65536, 0, 327680, 0, 1, 393216, 65536, 0, 458752, 0, 0, 524288, 0, 1, 589824, 0, 0, 655360, 65536, 0, 720896, 0, 1, 786432, 0, 1, 851968, 0, 1, 65537, 0, 1, 131073, 65536, 0, 196609, 0, 1, 262145, 65536, 0, 327681, 65536, 0, 393217, 0, 1, 458753, 0, 0, 524289, 0, 0, 589825, 0, 1, 720897, 0, 0, 786433, 0, 0, 851969, 65536, 1, 65538, 0, 0, 131074, 0, 0, 196610, 0, 1, 262146, 0, 1, 327682, 65536, 0, 393218, 0, 0, 458754, 65536, 0, 524290, 65536, 0, 589826, 65536, 0, 655362, 0, 0, 720898, 0, 0, 786434, 0, 0, 851970, 0, 0, 65539, 65536, 0, 131075, 65536, 0, 196611, 0, 0, 262147, 65536, 1, 327683, 65536, 0, 393219, 65536, 0, 458755, 0, 1, 524291, 65536, 1, 589827, 65536, 1, 655363, 65536, 0, 720899, 0, 1, 786435, 65536, 0, 851971, 65536, 1, 65540, 0, 1, 131076, 65536, 0, 196612, 65536, 1, 262148, 65536, 1, 327684, 65536, 0, 393220, 0, 0, 458756, 65536, 0, 524292, 65536, 0, 589828, 65536, 0, 655364, 0, 0, 720900, 0, 0, 786436, 65536, 0, 851972, 0, 1, 65541, 0, 0, 131077, 65536, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 1, 393221, 65536, 0, 458757, 65536, 0, 524293, 65536, 1, 589829, 65536, 1, 655365, 0, 0, 720901, 65536, 0, 786437, 65536, 0, 851973, 0, 1, 65542, 0, 1, 131078, 0, 0, 196614, 65536, 0, 262150, 0, 0, 327686, 65536, 0, 393222, 0, 1, 458758, 65536, 0, 524294, 0, 0, 589830, 0, 1, 655366, 0, 0, 720902, 0, 0, 786438, 65536, 0, 851974, 65536, 0, 65543, 65536, 0, 131079, 65536, 0, 196615, 0, 0, 262151, 65536, 0, 327687, 0, 1, 393223, 0, 1, 458759, 0, 0, 524295, 65536, 0, 589831, 65536, 0, 655367, 0, 0, 720903, 0, 0, 786439, 65536, 0, 851975, 65536, 1, 65544, 0, 0, 131080, 65536, 1, 196616, 65536, 1, 262152, 65536, 1, 327688, 0, 0, 393224, 0, 0, 458760, 0, 0, 655368, 65536, 0, 720904, 65536, 0, 786440, 0, 1, 851976, 0, 1, 65545, 0, 1, 131081, 65536, 1, 196617, 65536, 1, 262153, 65536, 1, 327689, 0, 1, 393225, 65536, 0, 458761, 0, 0, 524297, 0, 0, 589833, 65536, 0, 655369, 0, 0, 720905, 65536, 0, 786441, 65536, 1, 851977, 65536, 0, 65546, 65536, 0, 131082, 0, 1, 196618, 0, 0, 262154, 0, 0, 393226, 65536, 0, 458762, 0, 1, 524298, 0, 1, 589834, 65536, 0, 655370, 0, 1, 720906, 65536, 0, 786442, 65536, 0, 851978, 0, 1, 65547, 65536, 1, 131083, 65536, 0, 196619, 0, 1, 262155, 65536, 0, 327691, 0, 1, 393227, 0, 1, 458763, 65536, 0, 524299, 65536, 1, 589835, 0, 0, 655371, 0, 0, 720907, 65536, 1, 786443, 0, 1, 851979, 65536, 0, 65548, 65536, 0, 131084, 0, 0, 196620, 0, 1, 262156, 0, 0, 327692, 0, 1, 393228, 0, 0, 458764, 0, 1, 524300, 65536, 0, 589836, 65536, 0, 655372, 65536, 0, 720908, 0, 0, 786444, 0, 0, 851980, 65536, 0, 0, 0, 1, 1, 0, 1, 2, 65536, 0, 3, 0, 0, 4, 0, 0, 5, 0, 1, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 65536, 0, 10, 0, 1, 11, 65536, 1, 12, 0, 0, 655361, 0, 0, 327690, 65536, 0, 589832, 0, 1, 524296, 0, 0)
+layer_1/name = "MonsterNavigation"
+layer_1/y_sort_enabled = true
+layer_1/navigation_enabled = false
+layer_1/tile_data = PackedInt32Array(65537, 0, 2, 131073, 0, 2, 196609, 0, 2, 262145, 0, 2, 327681, 0, 2, 393217, 0, 2, 65538, 0, 2, 393218, 0, 2, 65539, 0, 2, 393219, 0, 2, 720899, 0, 2, 65540, 0, 2, 393220, 0, 2, 720900, 0, 2, 65541, 0, 2, 393221, 0, 2, 720901, 0, 2, 65542, 0, 2, 131078, 0, 2, 196614, 0, 2, 262150, 0, 2, 327686, 0, 2, 393222, 0, 2, 720902, 0, 2, 393223, 0, 2, 720903, 0, 2, 655361, 0, 2, 589825, 0, 2, 524289, 0, 2, 458753, 0, 2, 720897, 0, 2, 720898, 0, 2, 655367, 0, 2, 589831, 0, 2, 524295, 0, 2, 458759, 0, 2, 655368, 0, 2, 655369, 0, 2, 589833, 0, 2, 524297, 0, 2, 458761, 0, 2, 458760, 0, 2)
+layer_2/name = "Indicator"
+layer_2/y_sort_enabled = true
+layer_2/z_index = 1
+layer_2/navigation_enabled = false
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "MoveIndicator"
+layer_3/y_sort_enabled = true
+layer_3/z_index = 2
+layer_3/navigation_enabled = false
+layer_3/tile_data = PackedInt32Array()
+script = ExtResource("3_k3x0r")
+
+[node name="Stag" type="AnimatedSprite2D" parent="TileMap" node_paths=PackedStringArray("map", "level")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(15, 21)
+sprite_frames = SubResource("SpriteFrames_e1a34")
+animation = &"MoveSouthWest"
+script = ExtResource("5_6c61h")
+title = "Great Stag"
+map = NodePath("..")
+level = NodePath("../..")
+health = 10
+shape = Array[Vector2i]([Vector2i(1, 1), Vector2i(0, 1), Vector2i(-1, 1), Vector2i(1, 0), Vector2i(-1, 0), Vector2i(1, -1), Vector2i(0, -1), Vector2i(-1, -1)])
+moveDistance = 8
+highContrastFrames = ExtResource("6_i84oi")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false
+}
+
+[node name="Cursor" type="AnimatedSprite2D" parent="TileMap"]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-98, 143)
+sprite_frames = ExtResource("6_eudgo")
+animation = &"CursorLoop"
+autoplay = "CursorLoop"
+offset = Vector2(0, -8)
+
+[node name="Axe" type="AnimatedSprite2D" parent="TileMap" node_paths=PackedStringArray("map")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-115, 150)
+sprite_frames = ExtResource("7_364av")
+animation = &"Attack"
+offset = Vector2(0, -8)
+script = ExtResource("8_yditp")
+characterName = "Axe"
+map = NodePath("..")
+moveDistance = 3
+attackStrength = 3
+highContrast = ExtResource("9_6f3a4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap/Axe"]
+position = Vector2(0, -8)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Axe/StaticBody2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ncls3")
+
+[node name="Bow" type="AnimatedSprite2D" parent="TileMap" node_paths=PackedStringArray("map")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-98, 159)
+sprite_frames = ExtResource("9_qrc86")
+animation = &"Attack"
+offset = Vector2(0, -8)
+script = ExtResource("8_yditp")
+characterName = "Bow"
+map = NodePath("..")
+moveDistance = 4
+highContrast = ExtResource("11_y58gp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap/Bow"]
+position = Vector2(0, -8)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Bow/StaticBody2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ncls3")
+
+[node name="Shield" type="AnimatedSprite2D" parent="TileMap" node_paths=PackedStringArray("map")]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(-129, 143)
+sprite_frames = ExtResource("10_wfce3")
+animation = &"Attack"
+offset = Vector2(0, -8)
+script = ExtResource("8_yditp")
+characterName = "Shield"
+map = NodePath("..")
+moveDistance = 4
+attackStrength = 0
+highContrast = ExtResource("13_padgk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap/Shield"]
+position = Vector2(0, -8)
+input_pickable = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Shield/StaticBody2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ncls3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -66.0
+offset_right = 50.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("15_qsptt")
+text = "End Turn"
+
+[node name="Undo" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("15_qsptt")
+text = "Undo"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="turn"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Undo" to="." method="loadTurn"]

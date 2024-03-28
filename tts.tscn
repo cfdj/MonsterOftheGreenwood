@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jej1bpbavd20"]
+
+[ext_resource type="Script" path="res://TextToSpeech.gd" id="1_65ccq"]
+
+[node name="TTS" type="Node"]
+script = ExtResource("1_65ccq")

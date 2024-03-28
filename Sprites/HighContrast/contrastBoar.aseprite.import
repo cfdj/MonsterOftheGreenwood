@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cwp010o2ony74"
+path="res://.godot/imported/contrastBoar.aseprite-fa966121b57025d9d7fc220af3806927.res"
+
+[deps]
+
+source_file="res://Sprites/HighContrast/contrastBoar.aseprite"
+dest_files=["res://.godot/imported/contrastBoar.aseprite-fa966121b57025d9d7fc220af3806927.res"]
+
+[params]
+

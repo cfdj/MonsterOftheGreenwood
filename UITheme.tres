@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://0yn2t51td8om"]
+
+[ext_resource type="FontFile" uid="uid://c02l5j8nplwed" path="res://Baskic8.otf" id="1_gi3vj"]
+
+[resource]
+Button/fonts/font = ExtResource("1_gi3vj")
+CheckButton/fonts/font = ExtResource("1_gi3vj")
+Label/fonts/font = ExtResource("1_gi3vj")
