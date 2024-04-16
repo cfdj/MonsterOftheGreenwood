@@ -1,7 +1,3 @@
-res://levels/Level3.tscn
-res://Tilemaps/TileSet.tres
+res://StartMenu.gd
 res://StartMenu.tscn
-res://Settings.tscn
-res://levels/Level1.tscn
-res://levels/Level2.tscn
-res://levels/WinScreen.tscn
+res://Tilemaps/TileSet.tres
